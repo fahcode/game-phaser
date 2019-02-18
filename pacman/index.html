@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+	    ${htmlWebpackPlugin.options.extraHeaders}
+	    <title>${htmlWebpackPlugin.options.title}</title>
+	    <script type="text/javascript">${htmlWebpackPlugin.options.flexibleLibary}</script>
+		<style type="text/css">${htmlWebpackPlugin.options.baseCSS}</style>
+		<script>
+			if(${htmlWebpackPlugin.options.IS_DEV}) {
+				window.onerror = function(messageOrEvent, source, lineno, colno, error) {
+					alert(messageOrEvent);
+					alert(lineno);
+					alert(colno);
+					alert(error);
+				}
+			}
+		</script>
+	</head>
+    <body>
+		<% if(htmlWebpackPlugin.options.IS_DEV) {%>
+        	<div id="app"></div>
+		<%} else {%>
+			<%= htmlWebpackPlugin.options.injectData.content %>
+		<%}%>
+    </body>
+</html>

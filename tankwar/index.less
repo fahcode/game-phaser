@@ -1,0 +1,178 @@
+/* ##remfixer: 1080 */
+@import "~components/style/import.less";
+html, body, .app{overflow: hidden;}
+body{overflow-y: auto;}
+.app {
+    position: relative;
+    height: auto;
+    max-width: 1080px;
+    min-height: 100%;
+    margin: 0 auto;
+}
+.row{
+    position: relative;
+    width: 100%;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center top;
+    overflow: hidden;
+    img{
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+}
+.gameinfo{
+    height: 591px;
+    background-image: url('~assets/images/activity-anniversary-tankwar-2018/row_bg_03.png');
+    &_play{
+        width: 1010px;
+        height: 311px;
+        padding: 45px;
+        margin: 0 auto;
+        background-image: url('~assets/images/activity-anniversary-tankwar-2018/war_border.png');
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        background-position: center top;
+        text-align: center;
+        &-btn{
+            display: inline-block;
+            width: auto;
+            padding-left: 112px;
+            font-size: 60px;
+            color: #e9d372;
+            height: 100px;
+            line-height: 105px;
+            margin-top: 20px;
+            font-weight: bold;
+            background-image: url('~assets/images/activity-anniversary-tankwar-2018/tank.png');
+            background-size: 50px 50px;
+            background-repeat: no-repeat;
+            background-position: left center;
+        }
+        &-times{
+            font-size: 40px;
+            color: #e9d372;
+            line-height: 80px;
+            letter-spacing: 20px;
+        }
+    }
+    &_tips{
+        width: 100%;
+        margin-top: 60px;
+        line-height: 50px;
+        font-size: 32px;
+        color: #fac381;
+        text-align: center;
+    }
+}
+.awards{
+    height: 586px;
+    background-image: url('~assets/images/activity-anniversary-tankwar-2018/row_bg_04.png');
+}
+.applist{
+    height: 1190px;
+    background-image: url('~assets/images/activity-anniversary-tankwar-2018/row_bg_05.png');
+    overflow: hidden;
+
+    .title{
+        width: 648px;
+        height: 146px;
+        background-image: url('~assets/images/activity-anniversary-tankwar-2018/title1.png');
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        margin: 0 auto 100px;
+    }
+}
+.bottom{
+    height: 515px;
+    background-image: url('~assets/images/activity-anniversary-tankwar-2018/row_bg_06.png');
+    overflow: hidden;
+}
+.goTop{
+    position: fixed;
+    width: 150px;
+    height: 156px;
+    background-image: url('~assets/images/activity-anniversary-tankwar-2018/gotop.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    bottom: 90px;
+    right: 20px;
+    z-index: 100;
+}
+
+//覆盖样式
+body{
+    .carousel{
+        background: none !important;
+        padding: 0;
+        &__inner{padding: 0 36px;}
+        &__item{
+            img{/* width: 166px !important;height: 236px !important; */}
+        }
+    }
+    .qr-container{
+        width: 1008px;
+        height: 301px;
+        background-image: url('~assets/images/activity-anniversary-tankwar-2018/qr-code.png');
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            margin: 0 auto;
+    }
+    .rule-text{
+        margin-top: 120px;
+        background-color: transparent !important;
+        color: #fac381;
+    }
+    .app-list{
+        margin: 0;
+        padding: 0 36px;
+        background: none !important;
+        &__row{
+            margin-top: 96px !important;
+            &:first-child{margin-top: 0;}
+        }
+        &__app{
+            width: 207px;
+            height: 315px;
+            background-image: url('~assets/images/activity-anniversary-tankwar-2018/app_bg.png');
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            img{width: 150px;height: 150px;margin: 34px 30px 20px;}
+            &-name{
+                height: 60px;
+                line-height: 60px;
+                font-size: 34px;
+                color: #251e12;
+            }
+            &-btn{
+                height: 64px;
+                line-height: 64px;
+                margin-top: 20px;
+                font-size: 34px;
+                border: none;
+            }
+        }
+    }
+    .bottom-dialog{
+        background-color: #1f1423 !important;
+        color: #fff !important;
+    }
+    .address-btn, .issues__submit-btn, .address__submit-btn, .dialog__confirm-btn{background-color: #f3694e !important;color: #fff !important;}
+    .my-awards__info .get-btn{background-color: #f9b410 !important;color: #fff !important;}
+    .my-awards__info .cp-btn{border-color: #f3694e !important;color: #fff !important;}
+
+    .address, .issues{color: #fff !important;}
+    .issues__divider{background-color: rgba(255, 255, 255, 0.1) !important;}
+}
+
+@media screen and (orientation: landscape) {
+    body{
+        //弹窗
+        .dialog{
+            transform: scale(0.6, 0.6) translate3d(-82%, -82%, 0);
+            &__cancel-btn, &__confirm-btn{font-size: 38px !important;}
+        }
+        .loading{transform: scale(0.6, 0.6) translate3d(-82%, -82%, 0); }
+    }
+}
